@@ -15,9 +15,26 @@ $(function(){
 $(function(){
     $('#azul').click(function(){
         $('p').css("color", "blue");
+        $('p').fadeOut();
+        $('p').delay(1000);
+        $('p').fadeIn();
     });
     
+//a funcao fadein e fadeout é inserida para entrada e saida de dados 
+// podendo inserir o tempo desejado.    
     $('#vermelho').click(function(){
         $('p').css("color", "red");
+
+    //encadeamento de bloco    
+    $('#mensagem').text("cor alterada com sucesso")
+       .css('color', 'red')
+       //declaracao multipla css
+       .css({color:'red', border:'1px solid red'})
+       .delay(3000)
+       .fadeOut()
+       //adicionando classe 
+       .addClass('green');
+
+       $('button').removeClass('red');
     });
 });
